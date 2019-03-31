@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Employee Details";
+}
+
+<h4>Employee Details</h4>
+@{
+    var emp = ((CacheValueAndsource)ViewData["Employee"]);
+}
+@if (emp != null)
+{
+    <table style="border:dotted">
+        <tr>
+            <td><b>Employee Name:</b></td>
+            <td>@emp.EmployeeName</td>
+        </tr>
+        <tr>
+            <td><b>Source Of Data:</b></td>
+            <td style="color:darkred">@emp.Source</td>
+        </tr>
+
+    </table>
+
+}
